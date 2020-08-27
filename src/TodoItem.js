@@ -3,7 +3,7 @@ import './App.css';
 
 function TodoItem () {
   return (
-    <div className="App">
+    <div className="todo-item">
       <input type="checkbox"/>
       <p>Placeholder text</p>
     </div>
