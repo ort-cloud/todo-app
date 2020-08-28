@@ -16,7 +16,10 @@ class App extends Component {
     this.setState((prevState) => {
       const updatedTodos = prevState.todos.map((todo) => {
         if (todo.id === id) {
-          todo.completed = !todo.completed;
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
         }
         return todo;
       });
@@ -33,7 +36,7 @@ class App extends Component {
 
     return (
       <div className="todo-list">
-        <h1>Todo's</h1> 
+        <h1>Todo's</h1>
         {todoItems}
       </div>
     );
